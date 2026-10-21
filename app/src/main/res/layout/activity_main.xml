@@ -1,18 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:background="#33CCFF"
+    android:padding="20dp">
+
+    <!-- Header / Salam -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selamat Datang"
+            android:textSize="14sp"
+            android:textColor="#2D2A26"/>
+    </LinearLayout>
+
+    <!-- Info Nama Siswa -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/tvNamaSiswa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Erling Haaland (kelas XII RPL 5)"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#2D3436"/>
+    </LinearLayout>
+
+    <!-- Card Container Berjajar (Horizontal) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <!-- Kolom Kiri: Tugas -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tugas Padding"
+                android:textSize="12sp"
+                android:textColor="#636E72"/>
+
+            <TextView
+                android:id="@+id/tvJumlahTugas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#D63031"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Kolom Kanan: Rata-Rata Nilai -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rata - Rata Nilai"
+                android:textSize="12sp"
+                android:textColor="#636E72"/>
+
+            <TextView
+                android:id="@+id/tvRataNilai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="88,5"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#008894"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Bagian Tugas Terbaru -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Tugas Terbaru"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#2D3436"
+        android:layout_marginBottom="12dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Objeck Oriented Pemrogaming(OOP)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#2D3436"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buat Program CRUD Sederhana"
+            android:textSize="12sp"
+            android:textColor="#636E72"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
