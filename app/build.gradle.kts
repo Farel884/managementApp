@@ -4,16 +4,12 @@ plugins {
 
 android {
     namespace = "com.example.managementapp"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 37 // Diperbarui ke 37 sesuai rekomendasi
 
     defaultConfig {
         applicationId = "com.example.managementapp"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
 
@@ -29,9 +25,15 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    // Cukup tuliskan buildFeatures sekali saja di sini
+    buildFeatures {
+        viewBinding = true
     }
 }
 
